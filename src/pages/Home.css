@@ -79,9 +79,10 @@
 
 .special-card {
 	height: 100%;
-	width: 28%;
+	width: 30%;
 	background-color: var(--light-gray);
-	border-radius: var(--radius) var(--radius) 0 0;
+	border: 2px solid var(--primary);
+	border-radius: var(--radius);
 	overflow: clip;
 	display: flex;
 	flex-direction: column;
@@ -114,4 +115,88 @@
 
 .special-card a {
 	margin: 2rem 1rem;
+}
+
+/* testimonials section */
+.testimonials {
+	color: #fff;
+	background-color: var(--primary);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.testimonials h2 {
+	width: 100%;
+	text-align: center;
+	font-family: var(--markazi);
+	font-size: 48px;
+}
+
+.customer {
+	height: 25rem;
+	width: 40%;
+	margin: 1rem 0;
+	padding: 1rem 2rem;
+	background-color: var(--dark-gray);
+	border: 2px solid var(--secondary);
+	border-radius: var(--radius);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.cust-name {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.cust-img {
+	height: 10rem;
+	width: 10rem;
+	border-radius: 50%;
+}
+
+/* info section */
+.info {
+	max-height: 50rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.info-text {
+	width: 45%;
+}
+
+.info-text h1 {
+	font-size: 64px;
+	font-weight: 600;
+	font-family: var(--markazi);
+	color: var(--primary);
+}
+
+.info-text h3 {
+	margin: -1rem 0 1rem 0;
+	font: 32px;
+	font-weight: 400;
+	font-family: var(--markazi);
+	color: var(--primary);
+}
+
+.info-imgs {
+	height: 100%;
+	width: 35%;
+}
+
+.info-imgs img {
+	width: 90%;
+	aspect-ratio: 1/1.2;
+	object-fit: cover;
+	border-radius: var(--radius);
+}
+
+.info-imgs img:last-of-type {
+	margin: -4rem 0 0 4rem;
 }

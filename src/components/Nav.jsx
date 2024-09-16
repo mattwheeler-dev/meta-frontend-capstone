@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import logoSrc from "../assets/logo-primary.png";
+import logo from "../assets/logo-primary.png";
 import "./Nav.css";
 
 const Nav = () => {
 	return (
 		<nav>
-			<img src={logoSrc} alt="Little Lemon brand logo" width={200} />
+			<img src={logo} alt="Little Lemon brand logo" width={200} />
 			<ul>
 				<li>
 					<Link to="/">Home</Link>
