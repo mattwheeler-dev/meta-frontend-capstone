@@ -1,0 +1,41 @@
+.menu h1 {
+	text-align: center;
+	padding: 0 1rem;
+}
+
+.menu-card {
+	height: auto;
+	width: 60%;
+	margin: 1rem auto;
+	background-color: var(--light-gray);
+	border: 2px solid var(--primary);
+	border-radius: var(--radius);
+	overflow: clip;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.menu-card img {
+	height: 100%;
+	width: 50%;
+	object-fit: contain;
+}
+
+.menu-text {
+	height: 100%;
+	width: 45%;
+	padding: 1rem;
+}
+
+.menu-text h4 {
+	font-size: 1.2rem;
+}
+
+.menu-text .price {
+	margin-left: 3rem;
+}
+
+.menu-desc {
+	margin: 1rem 0;
+}

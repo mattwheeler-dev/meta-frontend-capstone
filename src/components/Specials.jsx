@@ -14,10 +14,10 @@ const Specials = () => {
 						src={saladSrc}
 						alt="Salad containing lettuce, peppers, olives, cheese, and croutons"
 					/>
-					<div className="special-name">
-						<p>Greek Salad </p>
-						<p className="price">$12.99</p>
-					</div>
+					<h4 className="special-name">
+						Greek Salad
+						<span className="price">$12.99</span>
+					</h4>
 					<p className="special-desc">
 						The famous greek salad of crispy lettuce, peppers, olives, and our
 						Chicago style feta cheese, garnished with crunchy garlic and
@@ -31,9 +31,9 @@ const Specials = () => {
 						src={bruschSrc}
 						alt="Bruschetta with garlic, salt, and olive oil"
 					/>
-					<p className="special-name">
+					<h4 className="special-name">
 						Bruschetta <span className="price">$5.99</span>
-					</p>
+					</h4>
 					<p className="special-desc">
 						Our Bruschetta is made from grilled bread that has been smeared with
 						garlic and seasoned with salt and olive oil.
@@ -43,9 +43,9 @@ const Specials = () => {
 
 				<div className="special-card">
 					<img src={lemonSrc} alt="Lemon cake dessert" />
-					<p className="special-name">
+					<h4 className="special-name">
 						Lemon Dessert <span className="price">$5.00</span>
-					</p>
+					</h4>
 					<p className="special-desc">
 						This comes straight from grandma{`'`}s recipe book, every last
 						ingredient has been sourced and is as authentic as can be imagined.

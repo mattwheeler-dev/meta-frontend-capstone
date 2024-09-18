@@ -1,7 +1,9 @@
+import Info from "../components/Info";
+
 const About = () => {
 	return (
 		<>
-			<h1>ABOUT</h1>
+			<Info />
 		</>
 	);
 };
