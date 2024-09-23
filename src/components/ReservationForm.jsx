@@ -1,17 +1,16 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
 import "./ReservationForm.css";
 
-const ReservationForm = () => {
-	const { availableTimes } = useOutletContext();
+const ReservationForm = ({ availableTimes }) => {
 	const [date, setDate] = useState("");
 	const [time, setTime] = useState("");
 	const [numGuests, setNumGuests] = useState(1);
 	const [occasion, setOccasion] = useState("");
 
-	const timeOptions = availableTimes.map((resTime) => {
-		return <option key={resTime}>{resTime}</option>;
-	});
+	// const timeOptions = availableTimes.map((resTime) => {
+	// 	return <option key={resTime}>{resTime}</option>;
+	// });
+	console.log(availableTimes);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -34,7 +33,7 @@ const ReservationForm = () => {
 				value={time}
 				onChange={(e) => setTime(e.target.value)}
 			>
-				{timeOptions}
+				{/* {timeOptions} */}
 			</select>
 
 			<label htmlFor="guests">Number of guests</label>
