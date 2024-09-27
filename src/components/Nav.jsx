@@ -8,22 +8,22 @@ const Nav = () => {
 			<img src={logo} alt="Little Lemon brand logo" width={200} />
 			<ul>
 				<li>
-					<Link to="/">Home</Link>
+					<Link to={"/"}>Home</Link>
 				</li>
 				<li>
-					<Link to="/about">About</Link>
+					<Link to={"/about"}>About</Link>
 				</li>
 				<li>
-					<Link to="/menu">Menu</Link>
+					<Link to={"/menu"}>Menu</Link>
 				</li>
 				<li>
-					<Link to="/reservations">Reservations</Link>
+					<Link to={"/reservations"}>Reservations</Link>
 				</li>
 				<li>
-					<Link to="/order">Order Online</Link>
+					<Link to={"/order"}>Order Online</Link>
 				</li>
 				<li>
-					<Link to="/login">Login</Link>
+					<Link to={"/login"}>Login</Link>
 				</li>
 			</ul>
 		</nav>

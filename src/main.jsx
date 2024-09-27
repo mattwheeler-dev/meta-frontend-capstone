@@ -8,12 +8,14 @@ import Menu from "./pages/Menu";
 import Reservations from "./pages/Reservations";
 import OrderOnline from "./pages/OrderOnline";
 import Login from "./pages/Login";
+import ErrorPage from "./pages/ErrorPage";
 import "./index.css";
 
 const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <App />,
+		errorElement: <ErrorPage />,
 		children: [
 			{
 				index: true,

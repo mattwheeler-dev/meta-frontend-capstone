@@ -1,15 +1,15 @@
 import { useState } from "react";
 import "./ReservationForm.css";
 
-const ReservationForm = ({ availableTimes }) => {
-	const [date, setDate] = useState("");
-	const [time, setTime] = useState("");
+const ReservationForm = ({ availableTimes, updateTimes }) => {
+	const [date, setDate] = useState(new Date().toLocaleDateString());
+	const [time, setTime] = useState(availableTimes[0]);
 	const [numGuests, setNumGuests] = useState(1);
-	const [occasion, setOccasion] = useState("");
+	const [occasion, setOccasion] = useState("Birthday");
 
-	// const timeOptions = availableTimes.map((resTime) => {
-	// 	return <option key={resTime}>{resTime}</option>;
-	// });
+	const timeOptions = availableTimes.map((resTime) => {
+		return <option key={resTime}>{resTime}</option>;
+	});
 	console.log(availableTimes);
 
 	const handleSubmit = (e) => {
@@ -33,7 +33,7 @@ const ReservationForm = ({ availableTimes }) => {
 				value={time}
 				onChange={(e) => setTime(e.target.value)}
 			>
-				{/* {timeOptions} */}
+				{timeOptions}
 			</select>
 
 			<label htmlFor="guests">Number of guests</label>
