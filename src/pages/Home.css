@@ -26,17 +26,8 @@
 }
 
 .hero article p {
+	margin-bottom: 2rem;
 	font-size: 18pt;
-}
-
-.hero article button {
-	margin-top: 1rem;
-	padding: 0.75rem 1rem;
-	font-size: 18px;
-	font-weight: 700;
-	background-color: var(--secondary);
-	border: none;
-	border-radius: var(--radius);
 }
 
 .hero img {
@@ -57,15 +48,6 @@
 .specials h2 {
 	font-family: var(--markazi);
 	font-size: 48px;
-}
-
-.specials button {
-	padding: 0.75rem 1rem;
-	font-size: 18px;
-	font-weight: 700;
-	background-color: var(--secondary);
-	border: none;
-	border-radius: var(--radius);
 }
 
 .specials article {

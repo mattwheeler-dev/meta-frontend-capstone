@@ -10,7 +10,6 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 	const timeOptions = availableTimes.map((resTime) => {
 		return <option key={resTime}>{resTime}</option>;
 	});
-	console.log(availableTimes);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
@@ -24,7 +23,12 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 				type="date"
 				id="res-date"
 				value={date}
-				onChange={(e) => setDate(e.target.value)}
+				onChange={(e) => {
+					console.log(e.target.value);
+					setDate(e.target.value);
+					console.log(date);
+					updateTimes(date);
+				}}
 			/>
 
 			<label htmlFor="res-time">Choose time</label>

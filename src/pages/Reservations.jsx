@@ -10,25 +10,22 @@ const reducer = (state, action) => {
 	}
 };
 
-const initializeTimes = {
-	availableTimes: [
-		"17:00",
-		"18:00",
-		"19:00",
-		"20:00",
-		"21:00",
-		"22:00",
-		"23:00",
-	],
+const initializeTimes = (times) => {
+	return { availableTimes: times, date: new Date() };
 };
 
 const Reservations = () => {
-	const [state, dispatch] = useReducer(reducer, initializeTimes);
+	const [state, dispatch] = useReducer(
+		reducer,
+		["17", "18", "19", "20"],
+		initializeTimes
+	);
 
-	const updateTimes = () => {
-		dispatch({ type: "reserve_time" });
+	const updateTimes = (date) => {
+		console.log(date);
+		dispatch({ type: "reserve_time", date: date });
 	};
-
+	console.log(`${state.availableTimes} | ${state.date}`);
 	return (
 		<section className="reservations">
 			<h1>Reserve a Table</h1>
