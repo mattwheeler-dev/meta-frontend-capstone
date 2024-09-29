@@ -2,10 +2,16 @@ import { useState } from "react";
 import "./ReservationForm.css";
 
 const ReservationForm = ({ availableTimes, updateTimes }) => {
-	const [date, setDate] = useState(new Date().toLocaleDateString());
+	const [date, setDate] = useState("");
 	const [time, setTime] = useState(availableTimes[0]);
 	const [numGuests, setNumGuests] = useState(1);
 	const [occasion, setOccasion] = useState("Birthday");
+
+	const handleDateChange = (e) => {
+		setDate(e.target.value);
+		const dateStr = new Date(e.target.value);
+		updateTimes(dateStr);
+	};
 
 	const timeOptions = availableTimes.map((resTime) => {
 		return <option key={resTime}>{resTime}</option>;
@@ -23,12 +29,7 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 				type="date"
 				id="res-date"
 				value={date}
-				onChange={(e) => {
-					console.log(e.target.value);
-					setDate(e.target.value);
-					console.log(date);
-					updateTimes(date);
-				}}
+				onChange={handleDateChange}
 			/>
 
 			<label htmlFor="res-time">Choose time</label>
