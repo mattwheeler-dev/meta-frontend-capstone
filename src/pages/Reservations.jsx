@@ -15,7 +15,10 @@ const Reservations = () => {
 	return (
 		<section className="reservations">
 			<h1>Reserve a Table</h1>
-			<ReservationForm availableTimes={availableTimes} updateTimes={dispatch} />
+			<ReservationForm
+				availableTimes={availableTimes}
+				updateTimes={updateTimes}
+			/>
 		</section>
 	);
 };

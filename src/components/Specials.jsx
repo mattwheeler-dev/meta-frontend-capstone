@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import saladSrc from "../assets/greek-salad.jpg";
 import bruschSrc from "../assets/bruschetta.jpg";
 import lemonSrc from "../assets/lemon-dessert.jpg";
@@ -6,7 +7,9 @@ const Specials = () => {
 	return (
 		<section className="specials">
 			<h2>This Week{`'`}s Specials!</h2>
-			<button>Online Menu</button>
+			<Link to={"/order"}>
+				<button>Online Menu</button>
+			</Link>
 
 			<article>
 				<div className="special-card">
@@ -23,7 +26,6 @@ const Specials = () => {
 						Chicago style feta cheese, garnished with crunchy garlic and
 						rosemary croutons.
 					</p>
-					<a href="">Order a delivery</a>
 				</div>
 
 				<div className="special-card">
@@ -38,7 +40,6 @@ const Specials = () => {
 						Our Bruschetta is made from grilled bread that has been smeared with
 						garlic and seasoned with salt and olive oil.
 					</p>
-					<a href="">Order a delivery</a>
 				</div>
 
 				<div className="special-card">
@@ -50,7 +51,6 @@ const Specials = () => {
 						This comes straight from grandma{`'`}s recipe book, every last
 						ingredient has been sourced and is as authentic as can be imagined.
 					</p>
-					<a href="">Order a delivery</a>
 				</div>
 			</article>
 		</section>

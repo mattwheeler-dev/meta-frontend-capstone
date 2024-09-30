@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import logoSrc from "../assets/restaurant-food.jpg";
 
 const Hero = () => {
@@ -10,7 +11,9 @@ const Hero = () => {
 					We are a family owned Mediterranean restaurant, focused on traditional
 					recipes served with a modern twist.
 				</p>
-				<button>Reserve a Table</button>
+				<Link to={"/reservations"}>
+					<button>Reserve a Table</button>
+				</Link>
 			</article>
 			<img src={logoSrc} alt="Tray of " width={100} />
 		</section>

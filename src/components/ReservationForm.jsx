@@ -28,6 +28,7 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 			<input
 				type="date"
 				id="res-date"
+				required
 				value={date}
 				onChange={handleDateChange}
 			/>
@@ -35,18 +36,20 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 			<label htmlFor="res-time">Choose time</label>
 			<select
 				id="res-time"
+				required
 				value={time}
 				onChange={(e) => setTime(e.target.value)}
 			>
 				{timeOptions}
 			</select>
 
-			<label htmlFor="guests">Number of guests</label>
+			<label htmlFor="guests">Number of guests (Max: 10)</label>
 			<input
 				type="number"
 				min="1"
 				max="10"
 				id="guests"
+				required
 				value={numGuests}
 				onChange={(e) => setNumGuests(e.target.value)}
 			/>
@@ -54,6 +57,7 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 			<label htmlFor="occasion">Occasion</label>
 			<select
 				id="occasion"
+				required
 				value={occasion}
 				onChange={(e) => setOccasion(e.target.value)}
 			>
@@ -61,7 +65,13 @@ const ReservationForm = ({ availableTimes, updateTimes }) => {
 				<option>Anniversary</option>
 			</select>
 
-			<input type="submit" value="Make Reservation" />
+			<input
+				className="submit-btn"
+				type="submit"
+				value="Make Reservation"
+				disabled={date == ""}
+				aria-label="Submit Reservation Button"
+			/>
 		</form>
 	);
 };

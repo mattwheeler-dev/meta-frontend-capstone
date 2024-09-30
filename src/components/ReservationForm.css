@@ -20,6 +20,11 @@
 	padding: 0.25rem 0 0.25rem 0.5rem;
 }
 
-.res-form input[type="submit"] {
+.submit-btn {
 	margin: 2rem 0;
+}
+
+.submit-btn:disabled {
+	cursor: not-allowed;
+	opacity: 80%;
 }
